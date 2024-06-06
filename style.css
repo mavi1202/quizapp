@@ -21,7 +21,7 @@
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
 }
 
-  
+
 body{
     height: 100svh;
     background: var(--bg-mobile);
@@ -34,8 +34,7 @@ header{
     display: flex;
     justify-content: flex-end;
 }
-.tema
-{
+.tema{
     padding: 8px 0;
     display: flex;
     align-items: center;
@@ -75,11 +74,9 @@ main {
     color: var(--primary-text-color);
     margin-bottom: 16px;
 }
-
 .boas_vindas h1 strong{
     font-weight: 500;
 }
-
 .boas_vindas p{
     color: var(--secondary-text-color);
     font-size: 14px;
@@ -102,6 +99,21 @@ main {
     padding: 12px;
     border-radius: 12px;
     box-shadow: var(--shadow);
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.assuntos button div{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.assuntos button img{
+    height: 100%;
 }
 
 .botao_html div{
@@ -111,8 +123,7 @@ main {
 .botao_css div{
     background: var(--bg-css);
 }
-
-.botao_Javascript div{
+.botao_javascript div{
     background: var(--bg-javascript);
 }
 

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,45 +7,45 @@
 }
 
 :root{
+    
     --bg-color: #f4f6fa;
     --purple: #a729f5;
     --primary-text-color: #313e51;
     --secondary-text-color: #626c7f;
-    --button-bg: #fff;
-    --shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    --button-bg:#fff;
+    --shadow:0px 16px 40px 0px rgba(143, 160, 193, 0.14);
     --bg-html: #fff1e9;
     --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
-    --white: #fff;
+    --white:#fff;
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
+
+    --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
 }
 
 
-body{
+body {
     height: 100svh;
     background: var(--bg-mobile);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-header{
+header {
     padding: 16px 24px;
     display: flex;
     justify-content: flex-end;
 }
-.tema{
+.tema {
     padding: 8px 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap:8px;
 }
-
-.tema img{
+.tema img {
     width: 16px;
 }
-
-.tema button {
+.tema button{
     height: 20px;
     width: 32px;
     background: var(--purple);
@@ -53,8 +53,7 @@ header{
     border-radius: 999px;
     padding: 4px;
 }
-
-.tema button div{
+.tema button div {
     background: var(--white);
     width: 12px;
     height: 12px;
@@ -63,18 +62,16 @@ header{
 main {
     padding: 32px 24px;
 }
-
-.boas_vindas{
+.boar_vindas {
     margin-bottom: 40px;
 }
-
-.boas_vindas h1 {
+.boas_vindas h1{
     font-size: 40px;
     font-weight: 300;
     color: var(--primary-text-color);
     margin-bottom: 16px;
 }
-.boas_vindas h1 strong{
+.boas_vindas h1 strong {
     font-weight: 500;
 }
 .boas_vindas p{
@@ -83,50 +80,91 @@ main {
     line-height: 150%;
     font-style: italic;
 }
-
-.assuntos {
+.assuntos{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .assuntos button {
     border: none;
-    background: var(--button-bg);
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 12px;
     border-radius: 12px;
     box-shadow: var(--shadow);
-
     font-size: 18px;
     font-weight: 500;
     color: var(--primary-text-color);
 }
-
-.assuntos button div{
+.assuntos button div {
     width: 40px;
     height: 40px;
     padding: 5px;
     border-radius: 5px;
 }
-
-.assuntos button img{
+.assuntos button img {
     height: 100%;
 }
-
-.botao_html div{
+.botao_html div {
     background: var(--bg-html);
 }
-
-.botao_css div{
+.botao_css div {
     background: var(--bg-css);
 }
-.botao_javascript div{
-    background: var(--bg-javascript);
+.botao_javascript div {
+    background:var(--bg-javascript) ;
 }
 
-.botao_acessibilidade div{
-    background: var(--bg-acessibilidade);
+.botao_acessibilidade div {
+    background:var(--bg-acessibilidade);
+}
+
+
+@media(min-width:1100px) {
+    body {
+        background: var(--bg-desktop) var(--bg-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        margin-block: 81px;
+    }
+
+    .tema img {
+        
+    }
+
+    main {
+        display: flex;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .boas_vindas h1{
+        font-size: 64px;
+        margin-bottom: 40px;
+    }
+
+    .assuntos{
+        gap:24px
+    }
+
+    .assuntos button{
+        font-size: 28px;
+        padding: 20px;
+        gap: 32px;
+    }
+
+    .assuntos button div {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
 }

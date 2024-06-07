@@ -165,6 +165,10 @@ main {
         margin-inline: auto;
     }
 
+    .boas_vindas {
+        margin-bottom: 40px;
+    }
+
     section{
         width: 100%;
     }

@@ -102,7 +102,6 @@ main {
     padding: 32px 24px;
 }
 
-
 .pergunta{
     margin-bottom: 40px;
 }
@@ -156,20 +155,33 @@ main {
     border-radius: 12px;
     box-shadow: var(--shadow);
     color: var(--primary-text-color);
-
+    
 }
 
 .alternativas label:has(input:checked) {
     outline: 3px solid var(--purple);
-
     & span {
         background: var(--purple);
         color: var(--white);
     }
 }
 
-.alternativas input{
-    display: none;
+.alternativas label#correta{
+    outline: 3px solid var(--green);
+
+    & span {
+        background: var(--green);
+        color: var(--white);
+    }
+}
+
+.alternativas label#errada{
+    outline: 3px solid var(--red);
+
+    & span {
+        background: var(--red);
+        color: var(--white);
+    }
 }
 
 .alternativas div {
@@ -186,7 +198,6 @@ main {
     border-radius: 5px;
     color: var(--secondary-text-color);
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,7 +210,6 @@ main {
     background: var(--purple);
     color: var(--white);
     width: 100%;
-
     font-size: 18px;
     font-weight: 500;
 }

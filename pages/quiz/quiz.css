@@ -13,25 +13,36 @@
     --secondary-text-color: #626c7f;
     --button-bg:#fff;
     --shadow:0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    --secundary-text-color: #626c7f;
+    --button-bg: #fff;
+    --shadow: 0px 16px 40px 0px rgba(143, 168, 193, 0.14);
     --bg-html: #fff1e9;
     --bg-css: #e0fdef;
     --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
     --white:#fff;
+    --white: #fff;
     --green: #26d782;
     --red:#ee5454;
     --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
     --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
+    --red: #ee5454;
+    --bg-mobile: url(../../assets/images/pattern-background-mobile-light.svg);
+    --bg-desktop: url(../../assets/images/pattern-background-desktop-light.svg);
 }
 
 body.escuro {
     --bg-color: #313e51;
     --bg-mobile: url(./assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(./assets/images/pattern-background-desktop-dark.svg);
+    --bg-mobile: url(../../assets/images/pattern-background-mobile-dark.svg);
+    --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
     --secondary-text-color: #abc1e1;
+    --secundary-text-color: #abc1e1;
     --button-bg: #3b4d66;
     --shadow:0px 16px 40px 0px rgba(49, 62, 81, 0.14);
+    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
 }
 
 body {
@@ -45,6 +56,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 16px;
+    padding: 16px 24px;
 }
 
 .assuntos{
@@ -55,6 +67,7 @@ header {
 
 .assuntos_icone{
     background:var(--bg-acessibilidade);
+    background: var(--bg-acessibilidade);
     width: 40px;
     height: 40px;
     padding: 5px;
@@ -65,7 +78,7 @@ header {
     width: 100%;
 }
 
-.assuntos h1 {
+.assuntos h1  {
     font-size: 18px;
     font-weight: 500;
     color: var(--primary-text-color);
@@ -76,6 +89,7 @@ header {
     display: flex;
     align-items: center;
     gap:8px;
+    gap: 8px;
 }
 
 .tema img {
@@ -87,6 +101,7 @@ header {
     width: 32px;
     background: var(--purple);
     border: none;
+    border: 0;
     border-radius: 999px;
     padding: 4px;
 }
@@ -102,14 +117,16 @@ main {
     padding: 32px 24px;
 }
 
-.pergunta{
-    margin-bottom: 40px;
+
+.pergunta { 
+      margin-bottom: 40px;
 }
 
 .pergunta p {
     font-style: italic;
     font-size: 14px;
     color: var(--secondary-text-color);
+    color: var(--secundary-text-color);
     margin-bottom: 12px;
 }
 
@@ -133,9 +150,11 @@ main {
     width: 60%;
     background: var(--purple);
     border: 999px;
+    border-radius: 999px;
 }
 
 .alternativas form{
+.alternativas form {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -147,6 +166,7 @@ main {
 }
 
 .alternativas label{
+.alternativas label {
     display: block;
     background: var(--button-bg);
     padding: 12px;
@@ -155,7 +175,7 @@ main {
     border-radius: 12px;
     box-shadow: var(--shadow);
     color: var(--primary-text-color);
-    
+
 }
 
 .alternativas label:has(input:checked) {
@@ -168,6 +188,7 @@ main {
 
 .alternativas label#correta{
     outline: 3px solid var(--green);
+}
 
     & span {
         background: var(--green);
@@ -175,13 +196,19 @@ main {
     }
 }
 
-.alternativas label#errada{
+.alternativas label#errada{ 
+    
     outline: 3px solid var(--red);
+}
 
     & span {
         background: var(--red);
         color: var(--white);
     }
+}
+
+.alternativas input {
+    display: none;
 }
 
 .alternativas div {
@@ -198,15 +225,19 @@ main {
     border-radius: 5px;
     color: var(--secondary-text-color);
     flex-shrink: 0;
+    color: var(--secundary-text-color);
+
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .alternativas button{
     padding: 16px;
     border-radius: 12px;
     border:none;
+    border: 0;
     background: var(--purple);
     color: var(--white);
     width: 100%;
@@ -214,8 +245,26 @@ main {
     font-weight: 500;
 }
 
-@media(min-width:1100px) {
-    .tema{
+
+@media(min-width: 1100px) {
+
+    header {
+        margin-block: 81px;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    .assunto_icone {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .assunto h1 {
+        font-size: 28px;
+    }
+
+    .tema {
         gap: 16px;
     }
 
@@ -231,5 +280,58 @@ main {
     .tema button div {
         width: 20px;
         height: 20px;
+    }
+
+    main {
+        max-width: 1160px;
+        margin-inline: auto;
+
+        display: flex;
+        gap: 130px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .pergunta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pergunta p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 27px;
+    }
+
+    .pergunta h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .alternativas form {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .alternativas label {
+        font-size: 22px;
+        padding: 18px 20px;
+    }
+
+    .alternativas div {
+        gap: 32px;
+    }
+
+    .alternativas div span {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .alternativas button {
+        font-size: 22px;
     }
 }
